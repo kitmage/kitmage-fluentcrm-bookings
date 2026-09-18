@@ -1,11 +1,12 @@
 <?php
 /**
- * Plugin Name:       KitMage FluentCRM Bookings
+ * Plugin Name:       KitMage FluentCRM Booking-Forms Connector
  * Description:       Adds a FluentBooking merge tag that links a guest to their FluentCRM form submissions.
  * Version:           1.0.0
  * Requires at least: 6.0
  * Requires PHP:      7.4
- * Author:            KitMage
+ * Author: Mike@KitMage
+ * Author URI: http://kitmage.com
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       kitmage-fluentcrm-bookings
