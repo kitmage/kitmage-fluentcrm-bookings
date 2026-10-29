@@ -16,7 +16,7 @@ This integration looks up the FluentCRM contact matching a FluentBooking guest's
 
 Use the following merge tag in FluentBooking:
 
-`{{booking.custom.aspen_fluentcrm_form_submissions_url}}`
+`{{booking.custom.kitmage_fluentcrm_form_submissions_url}}`
 
 The resulting value points to the subscriber's Form Submissions tab in the WordPress admin. The URL does not include `http://` or `https://`, because FluentBooking's link editor expects the protocol to be selected separately.
 
@@ -26,7 +26,7 @@ Both FluentBooking and FluentCRM must be installed and active. No configuration 
 
 1. Upload the plugin files to `/wp-content/plugins/kitmage-fluentcrm-bookings`, or install the plugin ZIP through the WordPress Plugins screen.
 2. Activate **KitMage FluentCRM Bookings**.
-3. Add `{{booking.custom.aspen_fluentcrm_form_submissions_url}}` where needed in FluentBooking.
+3. Add `{{booking.custom.kitmage_fluentcrm_form_submissions_url}}` where needed in FluentBooking.
 
 == Changelog ==
 
