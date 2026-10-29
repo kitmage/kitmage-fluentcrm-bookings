@@ -20,7 +20,9 @@ Use the following merge tag in FluentBooking:
 
 The resulting value points to the subscriber's Form Submissions tab in the WordPress admin. The URL does not include `http://` or `https://`, because FluentBooking's link editor expects the protocol to be selected separately.
 
-The URL remains available to merge tags but is hidden from the public booking confirmation/receipt details.\n\nBoth FluentBooking and FluentCRM must be installed and active. No configuration is required.
+The URL remains available to merge tags but is hidden from the public booking confirmation/receipt details.
+
+Both FluentBooking and FluentCRM must be installed and active. No configuration is required.
 
 == Installation ==
 
