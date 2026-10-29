@@ -4,7 +4,7 @@ Tags: fluentbooking, fluentcrm, bookings, merge-tag
 Requires at least: 6.0
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,7 +20,7 @@ Use the following merge tag in FluentBooking:
 
 The resulting value points to the subscriber's Form Submissions tab in the WordPress admin. The URL does not include `http://` or `https://`, because FluentBooking's link editor expects the protocol to be selected separately.
 
-Both FluentBooking and FluentCRM must be installed and active. No configuration is required.
+The URL remains available to merge tags but is hidden from the public booking confirmation/receipt details.\n\nBoth FluentBooking and FluentCRM must be installed and active. No configuration is required.
 
 == Installation ==
 
