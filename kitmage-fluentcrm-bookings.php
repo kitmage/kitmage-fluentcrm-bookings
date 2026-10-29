@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       KitMage FluentCRM Booking-Forms Connector
  * Description:       Adds a FluentBooking merge tag that links a guest to their FluentCRM form submissions.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author: Mike@KitMage
@@ -136,3 +136,21 @@ function kitmage_fluentcrm_contact_added_by_booking( $subscriber, $booking ) {
 	kitmage_fluentbooking_save_subscriber_url( $booking, $subscriber->id );
 }
 add_action( 'fluent_crm/contact_added_by_fluent_booking', 'kitmage_fluentcrm_contact_added_by_booking', 10, 4 );
+
+/**
+ * Hide the internal FluentCRM URL from public booking receipts.
+ *
+ * Keep the value in custom_fields_data so the booking.custom merge tag
+ * continues to work in FluentBooking notifications and other templates.
+ *
+ * @param array $receipt_data Data used to render the booking confirmation.
+ * @return array
+ */
+function kitmage_fluentbooking_hide_subscriber_url_on_receipt( $receipt_data ) {
+	if ( isset( $receipt_data['sections'] ) && is_array( $receipt_data['sections'] ) ) {
+		unset( $receipt_data['sections']['kitmage_fluentcrm_form_submissions_url'] );
+	}
+
+	return $receipt_data;
+}
+add_filter( 'fluent_booking/schedule_receipt_data', 'kitmage_fluentbooking_hide_subscriber_url_on_receipt' );
