@@ -63,12 +63,12 @@ function kitmage_fluentbooking_save_subscriber_url( $booking, $subscriber_id ) {
 	}
 
 	// Avoid an unnecessary metadata write when both hooks handle the booking.
-	if ( isset( $custom_data['aspen_fluentcrm_form_submissions_url'] )
-		&& $url === $custom_data['aspen_fluentcrm_form_submissions_url'] ) {
+	if ( isset( $custom_data['kitmage_fluentcrm_form_submissions_url'] )
+		&& $url === $custom_data['kitmage_fluentcrm_form_submissions_url'] ) {
 		return;
 	}
 
-	$custom_data['aspen_fluentcrm_form_submissions_url'] = $url;
+	$custom_data['kitmage_fluentcrm_form_submissions_url'] = $url;
 
 	\FluentBooking\App\Services\Helper::updateBookingMeta(
 		absint( $booking->id ),
